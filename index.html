@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio website HTML CSS only </title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+   </head>
+
+        <header class="header">
+        <a href="#" class="logo">Ritika Srivastava</a>
+
+        <!-- Add the following code for the menu icon -->
+    
+    <label for="menu-toggle" id="menu-icon">&#9776;</label>
+
+        <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#contact">Contact</a>
+        
+        
+        </nav>
+        </header>
+    
+        <section class="home">
+            <div class="home-image">
+                <img src="img.png" alt="">
+            </div>
+
+            <div class="home-content">
+            <h1 class="section_text_p1">Hello, I'm</h1>
+            <h2 class="title"> Ritika Srivastava</h2>
+            <h3 class="section_text_p2">Fronted Developer</h3>
+            <p>“My name is Ritika Srivastava and
+                I am a front-end developer with 
+                a background in electronics and communication engineering.”</p>
+
+                <div class="home-sci">
+                    <a href="https://www.linkedin.com/in/ritika-srivastava-47b11b221/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/ritikasrv12" target="_blank"><i class='bx bxl-github'></i></a>
+                    
+                </div>
+
+                <a href="#" class="btn">Download CV</a>
+               
+                </div>
+               </section>  
+               <hr>
+
+               <!--about section---> 
+               <div id="about">
+                <div class="container">
+                  <div class="row">
+                    <div class="about-col-1">
+                      <img src="about-img.png">
+                    </div>
+                    <div class="about-col-2">
+                      <h1 class="sub-title">About Me</h1>
+                      <p>I am a front-end developer with a passion for 
+                        creating beautiful and user-friendly websites.
+                        I have a background in electronics and communication engineering,
+                        which gives me a solid foundation in logic and problem-solving skills.
+                        I enjoy learning new technologies and frameworks,
+                        and I always strive to improve my skills and knowledge.
+                        Some of the tools I use are HTML, CSS, JavaScript.</p>
+
+                        <div class="tab-titles">
+                          <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                          <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                              <ul>
+                                 <li><span>Web Design</span><br>Proficient in HTML, CSS and JavaScript for creating responsive and interactive web pages.</li>
+                                 <li><span>Web Development</span><br>Created a web-based calculator using HTML, CSS, and JavaScript that can perform basic arithmetic operations and display the results.</li>
+                                 <li><span>Programming</span><br>Basic knowledge of C++ programming language and its applications.<br>Use online platforms such as LeetCode, Vscode and GeeksforGeeks
+                                  for learning and practicing web development and improve our coding skills.</li>
+                                 <li><span>Hardware</span><br> Interest and experience in working on hardware projects using Arduino, sensors, LEDs, etc.</li>
+                              </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                          <ul>
+                            <li><span>portfolio website(2023)</span><br>Created a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and achievements. </li>
+                            <li><span>Temperature Converter(2023)</span><br>Developed a web application using HTML, CSS, and JavaScript to convert temperature units between Celsius, Fahrenheit.</li>
+                            <li><span>Hardware Projects(2022)</span><br>Created projects such as a traffic light system.</li>
+                          </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                      <ul>
+                        <li><span>VIT Bhopal(2021-2025)</span><br>Pursuing B.Tech in Electronics and Communication Engineering.</li>
+                        <li><span>Kendriya Vidyalaya Aliganj,Lucknow(2020)</span><br>Completed 12th standard with 72.2 percentage.</li>
+                      </ul>
+                </div>
+                   </div>
+                  </div>
+                </div>
+               </div>
+              </div>
+              <hr>
+              <!----contact section---->
+              <div id="contact">
+                <div class="container">
+                  <div class="row">
+                    <div class="contact-left">
+                      <h1 class="sub-title">Contact Me!</h1>
+                      <h4>Thank you for visiting my portfolio website</h4>
+                      <p>If you wanna work with me on your next project, Just drop me a email or call me at :</p>
+                      <p><i class="fas fa-paper-plane"></i><span class="highlight">  ritikasrivastava646@gmail.com</span></p>
+                      <p><i class="fas fa-phone-square-alt"></i><span class="highlight"> 8470904793</span></p>
+                    </div>
+                  
+                  <div class="contact-right">
+                    <form>
+                      <input type="text" name="Name" placeholder="Your Name " required>
+                      <input type="email" name="email" placeholder="Your Email " required>
+                      <input type="number" name="number" placeholder="Your Mobile Number " required>
+                      <textarea name="Message" rows="6" placeholder="How Can I Help You "></textarea>
+                      <button type="submit" class="btn btn2">Submit</button>
+                      
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+                
+            
+        
+      <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+          for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+        // JavaScript code to toggle the menu
+document.addEventListener('DOMContentLoaded', function () {
+  var menuToggle = document.getElementById('menu-toggle');
+  var navbar = document.querySelector('.navbar');
+
+  menuToggle.addEventListener('change', function () {
+      if (menuToggle.checked) {
+          navbar.style.display = 'block'; // Show the menu
+      } else {
+          navbar.style.display = 'none'; // Hide the menu
+      }
+  });
+});
+
+
+
+      </script>
+   </body>
+   </html>
