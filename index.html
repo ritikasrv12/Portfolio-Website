@@ -8,21 +8,33 @@
     <title> Portfolio website HTML CSS only </title>
     <link rel="stylesheet" href="style.css">
     
-   
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+      hr {
+          display: none;
+      }
+      /* Other CSS styles can be added here */
+  </style>
 
 
    </head>
 
         <header class="header">
-        <a href="#" class="logo">Ritika Srivastava</a>
+          <a href="#" class="logo">
+            <img src="zippy-logo.png" alt="Zippy Logo" class="logo-img">
+        </a>
 
         <!-- Add the following code for the menu icon -->
     
+        <!-- Menu icons -->
+    <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" id="menu-icon">&#9776;</label>
+    <label for="menu-toggle" id="close-icon">&#10006;</label>
 
         <nav class="navbar">
+           <!-- Navigation links -->
         <a href="#" class="active">Home</a>
         <a href="./index.html#about">About</a>
         <a href="./index.html#contact">Contact</a>
@@ -40,9 +52,9 @@
             <h1 class="section_text_p1">Hello, I'm</h1>
             <h2 class="title"> Ritika Srivastava</h2>
             <h3 class="section_text_p2">Frontend Developer</h3>
-            <p>“My name is Ritika Srivastava and
-                I am a front-end developer with 
-                a background in electronics and communication engineering.”</p>
+            <p> Welcome to my portfolio! I am a frontend developer with an electronics and communication engineering background. 
+                I create beautiful and user-friendly websites using my electronics engineering skills. My websites are fast, reliable,
+                and compatible with different devices and platforms.Explore my projects and skills to find out more about my work. </p>
 
                 <div class="home-sci">
                     <a href="https://www.linkedin.com/in/ritika-srivastava-47b11b221/" target="_blank"><i class='bx bxl-linkedin'></i></a>
@@ -50,7 +62,7 @@
                     
                 </div>
 
-                <a href="#" class="btn">Download CV</a>
+                <a href="My-CV.png" download class="btn">Download CV</a>
                
                 </div>
                </section>  
@@ -116,7 +128,7 @@
                       <h1 class="sub-title">Contact Me!</h1>
                       <h4>Thank you for visiting my portfolio website</h4>
                       <p>If you wanna work with me on your next project, Just drop me a email or call me at :</p>
-                      <p><i class="fas fa-paper-plane"></i><span class="highlight">  ritik@examplegmail.com</span></p>
+                      <p><i class="fas fa-paper-plane"></i><span class="highlight">  ritika@examplegmail.com</span></p>
                       <p><i class="fas fa-phone-square-alt"></i><span class="highlight"> 84xxxxxxxx</span></p>
                     </div>
                   
@@ -157,15 +169,25 @@
 document.addEventListener('DOMContentLoaded', function () {
   var menuToggle = document.getElementById('menu-toggle');
   var navbar = document.querySelector('.navbar');
+  var closeIcon = document.getElementById('close-icon'); // Add this line
+
 
   menuToggle.addEventListener('change', function () {
       if (menuToggle.checked) {
           navbar.style.display = 'block'; // Show the menu
+          closeIcon.style.display = 'block'; // Show the close icon
       } else {
           navbar.style.display = 'none'; // Hide the menu
-      }
+          closeIcon.style.display = 'none'; // Hide the close icon
+          
+    }
   });
-});
+
+    
+   
+
+
+  });
 
 
 

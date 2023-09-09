@@ -33,6 +33,12 @@
 
 }
 
+.logo-img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -370,26 +376,7 @@ form input, form textarea{
     border-radius: 5px;
 }
 
-    #menu-icon{
-    color: white; 
-    font-size: 25px; 
-    display: none; 
-    cursor: pointer;
-    position: absolute; 
-    right:20px;
-}
-
-#close-icon{
-    color: white; 
-    font-size: 25px; 
-    display: none; 
-    cursor: pointer;
-    position: absolute; 
-    right:20px;
-
-}
-
-/* ... Your existing CSS code ... */
+   /* ... Your existing CSS code ... */
 
 /* Hide the checkbox input */
 #menu-toggle {
@@ -405,6 +392,13 @@ form input, form textarea{
     right: 20px;
     top: 20px;
     z-index: 101; /* Ensure the menu icon is above other content */
+    color: #fff; /* Change the color of the menu icon */
+}
+
+#close-icon {
+    /* Your styling for the close icon */
+    display: none; /* Hide the close icon initially */
+    color: #fff; /* Change the color of the close icon */
 }
 
 /* Style the menu when the checkbox is checked */
@@ -429,15 +423,86 @@ form input, form textarea{
     /* Add other styles as needed */
 }
 
+#menu-toggle:checked + #menu-icon + #close-icon {
+    display: block; /* Show the close icon when the menu is checked */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    z-index: 102; /* Ensure the close icon is above the menu icon */
+    color: #fff; /* Change the color of the close icon */
+}
+
 /* ... Continue with your existing CSS code ... */
 
 
 
 
 /*----------css for small screens-----*/
+
+
 /* For Mobile Devices */
 @media (max-width: 600px) {
     /* Add your mobile-specific styles here */
+
+    /* ... Other styles for smaller screens ... */
+
+    .home-image {
+        width: 200px; /* Reduce the width of the home-image */
+        height: 200px; /* Reduce the height of the home-image */
+        border-width: 10px; /* Reduce the border width */
+        background: #fff;
+        background: #031540; /* Change the background color to dark blue */
+        border-color: #031540; /* Change the border color to dark blue */
+    }
+    .home-image img {
+        border-color: #fff; /* Change the circle's inner border color to white */
+    }
+
+   
+
+    .home-content {
+        padding: 20px; /* Reduce the padding for the home-content */
+        background: #031540;
+        color: #fff;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .home-content h1 {
+        font-size: 30px; /* Reduce the font size for the heading */
+    }
+
+    .home-content h2 {
+        font-size: 24px; /* Reduce the font size for the subheading */
+    }
+
+    .home-content h3 {
+        font-size: 18px; /* Reduce the font size for the tagline */
+    }
+
+    .home-content p {
+        font-size: 14px; /* Reduce the font size for the paragraph */
+    }
+
+    /* Adjust the about section background color for mobile screens */
+    #about {
+        background: #031540;
+    }
+
+    .about-col-1 {
+        background: #fff;
+        text-align: center;
+    }
+
+    .about-col-2 {
+        background: #031540;
+    }
+
+    .about-col-2 h1, .about-col-2 p {
+        color: #fff;
+    }
+
     .header {
         padding: 10px 5%;
     }
@@ -449,7 +514,17 @@ form input, form textarea{
         left: 0;
         width: 100%;
         background-color: #031540; /* Background color for the mobile menu */
-        display: none; /* Hide the menu by default */
+        display: flex; /* Hide the menu by default */
+    }
+
+    /* ... Other styles for smaller screens ... */
+    
+    /* Style the navigation links inside the menu */
+    .navbar.active a {
+        color: #fff;
+        font-size: 18px;
+        margin: 20px 0;
+        /* Add other styles as needed */
     }
 
     .navbar.active {
@@ -565,101 +640,9 @@ form input, form textarea{
     }
 
   }
-  /* For Mobile Devices */
-@media (max-width: 600px) {
-    /* Add your mobile-specific styles here */
-    .header {
-        padding: 10px 5%;
-    }
+  
 
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #031540;
-        display: none;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    #menu-icon {
-        display: block;
-    }
-
-    #close-icon {
-        display: none;
-    }
-
-    /* Add a background color for the left portion (image) */
-    .home-image {
-        background: #fff;
-    }
-
-    /* Add a background color for the right portion (content) */
-    .home-content {
-        background: #031540;
-        color: #fff;
-        padding: 20px;
-        border-radius: 0 0 10px 10px;
-    }
-
-    /* Adjust the about section background color for mobile screens */
-    #about {
-        background: #031540;
-    }
-
-    .about-col-1 {
-        background: #fff;
-        text-align: center;
-    }
-
-    .about-col-2 {
-        background: #031540;
-    }
-
-    .about-col-2 h1, .about-col-2 p {
-        color: #fff;
-    }
-
-    /* Update the CSS for small screens */
-    /* ... (other mobile-specific styles) ... */
-}
-/* For Mobile Devices */
-@media (max-width: 600px) {
-    /* ... Other styles for smaller screens ... */
-
-    .home-image {
-        width: 200px; /* Reduce the width of the home-image */
-        height: 200px; /* Reduce the height of the home-image */
-        border-width: 10px; /* Reduce the border width */
-    }
-
-    .home-content {
-        padding: 10px; /* Reduce the padding for the home-content */
-    }
-
-    .home-content h1 {
-        font-size: 30px; /* Reduce the font size for the heading */
-    }
-
-    .home-content h2 {
-        font-size: 24px; /* Reduce the font size for the subheading */
-    }
-
-    .home-content h3 {
-        font-size: 18px; /* Reduce the font size for the tagline */
-    }
-
-    .home-content p {
-        font-size: 14px; /* Reduce the font size for the paragraph */
-    }
-}
-
+ 
 
 }   
 
